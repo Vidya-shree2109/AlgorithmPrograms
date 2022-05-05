@@ -9,7 +9,7 @@ public class Program
         Console.WriteLine("                                   WELCOME TO ALGORITHM PROGRAMS                                   ");
         bool check = true;
         const string path = @"E:\PracticeProblems\AlgorithmPrograms\AlgorithmPrograms\AlgorithmPrograms\Utility\BinarySearchFile.txt";
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Exit");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Exit");
         while (check)
         {
             Console.Write("\nEnter an option to execute :");
@@ -28,6 +28,10 @@ public class Program
                     sort.Sort();
                     break;
                 case 3:
+                    BubbleSort bubble = new BubbleSort();
+                    bubble.Sort();
+                    break;
+                case 4:
                     check = false;
                     break;
                 default:
