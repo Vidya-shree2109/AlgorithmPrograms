@@ -30,7 +30,7 @@ namespace AlgorithmPrograms.Utility
                 {
                     end = mid + 1;
                     Console.WriteLine("The word is at position {0}", end);
-                    Sbreak;
+                    break;
                 }
             }
         }

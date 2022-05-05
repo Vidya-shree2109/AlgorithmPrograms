@@ -9,10 +9,10 @@ public class Program
         Console.WriteLine("                                   WELCOME TO ALGORITHM PROGRAMS                                   ");
         bool check = true;
         const string path = @"E:\PracticeProblems\AlgorithmPrograms\AlgorithmPrograms\AlgorithmPrograms\Utility\BinarySearchFile.txt";
-        Console.WriteLine("1.Binary Search\n2.Exit");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Exit");
         while (check)
         {
-            Console.WriteLine("\nEnter an option to execute :");
+            Console.Write("\nEnter an option to execute :");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -24,6 +24,10 @@ public class Program
                     binary.binarySearch(inputArray, word);
                     break;
                 case 2:
+                    InsertionSort sort = new InsertionSort();
+                    sort.Sort();
+                    break;
+                case 3:
                     check = false;
                     break;
                 default:
