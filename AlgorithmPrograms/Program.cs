@@ -9,7 +9,7 @@ public class Program
         Console.WriteLine("                                   WELCOME TO ALGORITHM PROGRAMS                                   ");
         bool check = true;
         const string path = @"E:\PracticeProblems\AlgorithmPrograms\AlgorithmPrograms\AlgorithmPrograms\Utility\BinarySearchFile.txt";
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Exit");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Check For Anagram\n5.Exit");
         while (check)
         {
             Console.Write("\nEnter an option to execute :");
@@ -18,7 +18,8 @@ public class Program
             {
                 case 1:
                     BinarySearch binary = new BinarySearch();
-                    string[] inputArray = File.ReadAllLines(path);
+                    string words = File.ReadAllText(path);
+                    string[] inputArray = words.Split(',');
                     Console.WriteLine("Enter a word to search :");
                     string word = Console.ReadLine();
                     binary.binarySearch(inputArray, word);
@@ -32,6 +33,12 @@ public class Program
                     bubble.Sort();
                     break;
                 case 4:
+                    Anagram anagram = new Anagram();
+                    string firstWord = "TheClassroom";
+                    string secondWord = "SchoolMaster";
+                    anagram.IsAnagram(firstWord, secondWord);
+                    break;
+                case 5:
                     check = false;
                     break;
                 default:
