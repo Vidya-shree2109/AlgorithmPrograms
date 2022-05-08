@@ -9,7 +9,7 @@ public class Program
         Console.WriteLine("                                   WELCOME TO ALGORITHM PROGRAMS                                   ");
         bool check = true;
         const string path = @"E:\PracticeProblems\AlgorithmPrograms\AlgorithmPrograms\AlgorithmPrograms\Utility\BinarySearchFile.txt";
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Check For Anagram\n5.Prime Number In Range\n6.Exit");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Check For Anagram\n5.Prime Number In Range\n6.Prime Palindrome\n7.Exit");
         while (check)
         {
             Console.Write("\nEnter an option to execute :");
@@ -46,6 +46,10 @@ public class Program
                     prime.IsPrime(firstNumber, secondNumber);
                     break;
                 case 6:
+                    PrimePalindrome primePalindrome = new PrimePalindrome();
+                    primePalindrome.PrimePalindromNumber();
+                    break;
+                case 7:
                     check = false;
                     break;
                 default:
